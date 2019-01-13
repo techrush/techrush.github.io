@@ -2,15 +2,97 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat',sans-serif;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
-
+.main-title-L{
+    font-weight: 600;
+    color: black;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    padding-left: 4rem;
+}
+.emailInput-L{
+    width: 100%;
+    margin-top: 7vh;
+}
+.emailPopper{
+    height: 0;
+}
+.inputEmail-L{
+    width: 70%;
+    margin: 0 15%;
+    padding: 0 0;
+}
+#submit-L{
+    width: 10vw;
+height: 60px;
+margin-left: 20vw;
+margin-top: 8vh;
+border-radius: 10px;
+border: 1px solid black;
+background-color: black;
+color: #fff;
+font-size: 1.2rem;
+font-weight: 600;
+}
+#submit-L:active{
+   color: #F7153D;
+   transform: scale(1.02); 
+}
+#submit-L:hover{
+    cursor: pointer;
+}
+.main-span-L{
+    margin: 3vh 0; 
+    width: 100%;
+    text-align: center;
+    color: #F7153D;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.circle-L{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: 2vw;
+    border: 2px solid #707070;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: lighter;
+}
+.menu-countdown{
+    width: 49vw;
+    height: 75%;
+    border-right: 3px solid #707070;
+    display: inline-block;
+}
+.menu-countdown-mail {
+    width: 49vw;
+    height: 75%;
+    display: inline-block; 
+}
 .background{
     height: 100vh;
     width: 100vw;
     background-image: url('../images/background.jpg');
     background-size: cover;
 
+}
+.emailPopper{
+    visibility: hidden;
+    height: 0;
+}
+.emailPopperSpan{
+    visibility: hidden;
+}
+.emailPopperHeader,.emailInput{
+    visibility: hidden;
+    height: 0;
+}
+.header-info{
+    overflow-y: hidden;
 }
 header{
     width: 100vw;
@@ -22,9 +104,32 @@ header{
     font-weight:bold;
     font-size: 5rem;
     display: inline-block;
+    height: 7rem;
+    padding-right: 25px;
+    border-right: 1px solid white;
 }
+input{
+    border: none;
+    font-size: 18px;
+    border-bottom: 1px solid red;
+}
+input:focus{
+    outline: none;
+    background: #fff;
+}
+input::placeholder {
+    color: #707070;
+    font-size: 15px;
+  }
 .header-info{
     display: inline-block;
+    padding-bottom: 0.82rem;
+    height: 4rem;
+    width: 600px;
+    padding-bottom: 1.7rem;
+}
+.header-info-1{
+    padding-top: 1rem;
 }
 .days-rem-message{
     position: absolute;
@@ -86,7 +191,7 @@ header{
 }
 .main-title{
     font-family: 'Montserrat',sans-serif;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 6.25rem;
     color: #F7153D;
     letter-spacing: 1rem;
@@ -115,19 +220,27 @@ header{
     transform-origin: left top 0;
 }
 .cross-text:hover{
-    font-weight: 300;
+    font-weight: 600;
+
     cursor: pointer;
 }
 .cross-text-1{
     top: 90px;
-    left: 89%;
+    left: 89vw;
+}
+.cross-line-1{
+    top: 395px;
+    position: absolute;
+    left: 88.4vw;
+    border: 1px solid #707070;
+    height: 100px;
 }
 .cross-text-2{
     top: 550px;
-    left: 89%;
+    left: 89vw;
 }
 .social-media-container{
-    height: 100px;
+    /* height: 100px; */
     color: white;
     padding-top: 0px;
     font-size: 25px;
@@ -202,7 +315,11 @@ header{
     padding-left: 110px;
     text-align: left;
   }
-
+  input {
+    border: none;
+    font-size: 18px;
+    border-bottom: 1px solid red;
+}
   .svg-rect-wrapper{
       width: 500px;
   }
@@ -242,15 +359,19 @@ header{
     animation: openMenu 0.3s linear 1s 1;
     /* animation-play-state: paused; */
   }
-  .menu-closed{
+  /* .menu-closed{
       visibility: hidden;
-  }
+  } */
   .menu-closer{
     height: 40px;
     width: 40px;
     display: inline-block;
     margin-left: 92vw;
-    margin-top: 50px;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+  .menu-closer:hover{
+      cursor: pointer;
   }
   .menu-cross{
    height: 38px;
@@ -286,6 +407,7 @@ header{
       stroke-width: 4px;
     }
   }
+  /* @media (max-width:  ) */
  
   @media (max-width: 600px) {
     
@@ -295,7 +417,7 @@ header{
     }
     .days-rem{
         font-size: 3rem;
-        
+        height: 6rem;
     }
     .header-line{
         left: 92px;
@@ -304,6 +426,7 @@ header{
         margin-left: 1rem;
         font-size: 0.8rem;
         font-weight: 300;
+        width: 200px;
         letter-spacing: 0px;
     }
     .days-rem-message{
@@ -393,12 +516,12 @@ header{
     }
     .svg-wrapper {
         height: 60px;
-          margin: 0 auto;
+        margin: 0 auto;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
         width: 320px;
-        
+        overflow-y: hidden;
       visibility: visible;
       }
       .shape {
@@ -426,7 +549,9 @@ header{
         padding-top: 40px;
         padding-left: 0px;
     }
-      
+      .getnotified{
+          overflow-y: hidden;
+      }
       .svg-wrapper:active .shape {
         -webkit-animation: 0.5s drawS linear forwards;
         animation: 0.5s drawS linear forwards;
@@ -500,13 +625,16 @@ header{
     .emailPopper{
         position: absolute;
         top: 100vh;
+        visibility: visible;
         left: 0;
         width: 100vw;
         background: #fff;
-        height: 35vh;
+        height: 0vh;
+        overflow: hidden;
     }
     .emailPopperHeader{
         height: 10vh;
+        visibility: visible;
         width:100%;
         font-size: 1.3rem;
         font-weight: 600;
@@ -520,6 +648,7 @@ header{
         /* margin-top: 3vh; */
         /* width: 100vw; */
         text-align: center;
+        visibility: visible;
         padding-top: 1.6vh;
         font-size: 1rem;
         font-weight: 500;
@@ -529,6 +658,7 @@ header{
         margin-top: 1vh;
         height: 22vh;
         width: 100vw;
+        visibility: visible;
         /* background-color: #F7153D; */
    }
 .inputEmail{
