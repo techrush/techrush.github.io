@@ -14,13 +14,9 @@ menuCloser.addEventListener("click",()=>{
  
     menu.classList.add('menu-closed');
 });
-// function ani(){
-//     document.getElementById('text').className = 'animationClass';
-//   }
 document.getElementsByClassName('shape')[0].addEventListener('click', ()=>{
     anime({
         targets: '.text',
-        // translateX: 250
         color: '#F7153D'
       });
     
@@ -28,7 +24,10 @@ document.getElementsByClassName('shape')[0].addEventListener('click', ()=>{
 document.getElementsByClassName('svg-wrapper')[0].addEventListener('click',()=>{
     anime({
         targets: '.emailPopper',
-        top: ['100vh','65vh']
+        top: ['100vh','65vh'],
+        complete: ()=>{
+            document.getElementsByClassName('emailPopper')[0].style.visibility = 'hidden';
+        }
     });
     
 });
