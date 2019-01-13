@@ -25,9 +25,9 @@ document.getElementsByClassName('svg-wrapper')[0].addEventListener('click',()=>{
     anime({
         targets: '.emailPopper',
         top: ['100vh','65vh'],
-        begin: ()=>{
-            document.getElementsByClassName('emailPopper')[0].style.visibility = 'visible';
-        }
+        // begin: ()=>{
+        //     document.getElementsByClassName('emailPopper')[0].style.visibility = 'visible';
+        // }
     });
     
 });
@@ -35,9 +35,9 @@ document.getElementById('submit').addEventListener('click', ()=>{
     anime({
         targets: '.emailPopper',
         top: ['65vh','100vh'],
-        complete: ()=>{
-            document.getElementsByClassName('emailPopper')[0].style.visibility = 'hidden';
-        }
+        // complete: ()=>{
+        //     document.getElementsByClassName('emailPopper')[0].style.visibility = 'hidden';
+        // }
     });
 document.getElementById('text').innerText = "NOTIFIED";
 });
