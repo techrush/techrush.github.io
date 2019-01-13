@@ -24,7 +24,7 @@ document.getElementsByClassName('shape')[0].addEventListener('click', ()=>{
 document.getElementsByClassName('svg-wrapper')[0].addEventListener('click',()=>{
     anime({
         targets: '.emailPopper',
-        top: ['100vh','65vh'],
+        top: ['100vh','65vh']
         // begin: ()=>{
         //     document.getElementsByClassName('emailPopper')[0].style.visibility = 'visible';
         // }
@@ -34,7 +34,7 @@ document.getElementsByClassName('svg-wrapper')[0].addEventListener('click',()=>{
 document.getElementById('submit').addEventListener('click', ()=>{
     anime({
         targets: '.emailPopper',
-        top: ['65vh','100vh'],
+        top: ['65vh','100vh']
         // complete: ()=>{
         //     document.getElementsByClassName('emailPopper')[0].style.visibility = 'hidden';
         // }
