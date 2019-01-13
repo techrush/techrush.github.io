@@ -4,15 +4,24 @@ const shape = document.getElementsByClassName('rect-shape')[0];
 const menu = document.getElementsByClassName('menu-container')[0];
 
 svgRect.addEventListener("click",()=>{
-    menu.classList.remove('menu-closed');
+    // menu.classList.remove('menu-closed');
    
-    menu.style.height = "60vh";
+    // menu.style.height = "60vh";
 
     console.log('cool');
+    anime({
+        targets: '.menu-container',
+        height: ['0vh','60vh']
+    });
 });
 menuCloser.addEventListener("click",()=>{
- 
-    menu.classList.add('menu-closed');
+    // document.getElementsByClassName('svg-rect-wrapper')[0].style.visibility = "visible";
+    // menu.classList.add('menu-closed');
+    // alert('Hey');
+    anime({
+        targets: '.menu-container',
+        height: ['60vh','0vh']
+    });
 });
 document.getElementsByClassName('shape')[0].addEventListener('click', ()=>{
     anime({
@@ -24,10 +33,9 @@ document.getElementsByClassName('shape')[0].addEventListener('click', ()=>{
 document.getElementsByClassName('svg-wrapper')[0].addEventListener('click',()=>{
     anime({
         targets: '.emailPopper',
-        top: ['100vh','65vh']
-        // begin: ()=>{
-        //     document.getElementsByClassName('emailPopper')[0].style.visibility = 'visible';
-        // }
+        top: ['100vh','65vh'],
+        height: ['0','35vh']
+       
     });
     
 });
@@ -35,9 +43,7 @@ document.getElementById('submit').addEventListener('click', ()=>{
     anime({
         targets: '.emailPopper',
         top: ['65vh','100vh']
-        // complete: ()=>{
-        //     document.getElementsByClassName('emailPopper')[0].style.visibility = 'hidden';
-        // }
+       
     });
 document.getElementById('text').innerText = "NOTIFIED";
 });
