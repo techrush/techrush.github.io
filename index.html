@@ -45,26 +45,25 @@
         <div class="countdownContainerAllign">
 
     <div class="circle" >
-       <div class="circleText" id='days'>
-           10
+       <div class="circleText" id='days1'>
+           
        </div>
         DAYS
     </div>
     <div class="circle">
             <div class="circleText"  id='hours'>
-                    10
+                    
                 </div>
                  HOURS
     </div>
     <div class="circle" >
             <div id='min' class="circleText">
-                    10
-                </div>
+                                    </div>
                 MIN
     </div>
     <div class="circle" >
             <div class="circleText" id='secs'>
-                    10
+                    
                 </div>
                  SECS
     </div>
@@ -87,9 +86,9 @@
                      <div class="text">GET NOTIFIED</div>
                   </div>
                   
-                  <div class="svg-wrapper" onclick="ani()">
+                  <div class="svg-wrapper">
                         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-                          <rect class="shape" height="60" width="320" />
+                          <rect class="shape" id="shape" height="60" width="320" />
                         </svg>
                          <div class="text" id='text'>GET NOTIFIED</div>
                       </div>
@@ -104,6 +103,17 @@
             </div>
     </div>
 </div>
+<div class="emailPopper">
+    <div class="emailPopperHeader">
+        WE'll KEEP YOU POSTED!
+        
+        <div class="emailPopperSpan"> JUST DROP YOUR EMAIL ID </div> 
+    </div>
+    
+    <div class="emailInput">
+        <input type="text" name="email" value="" class="inputEmail" placeholder="email">
+        <input type="submit" name="submit" id="submit" value="GET IN">
+    </div>  </div>
     <script src="js/index.js"></script>
 </body>
 </html>
