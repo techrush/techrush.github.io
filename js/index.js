@@ -28,14 +28,14 @@ document.getElementsByClassName('shape')[0].addEventListener('click', ()=>{
 document.getElementsByClassName('svg-wrapper')[0].addEventListener('click',()=>{
     anime({
         targets: '.emailPopper',
-        top: ['100vh','70vh']
+        top: ['100vh','65vh']
     });
     
 });
 document.getElementById('submit').addEventListener('click', ()=>{
     anime({
         targets: '.emailPopper',
-        top: ['70vh','100vh']
+        top: ['65vh','100vh']
     });
 document.getElementById('text').innerText = "NOTIFIED";
 });
