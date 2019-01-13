@@ -25,8 +25,8 @@ document.getElementsByClassName('svg-wrapper')[0].addEventListener('click',()=>{
     anime({
         targets: '.emailPopper',
         top: ['100vh','65vh'],
-        complete: ()=>{
-            document.getElementsByClassName('emailPopper')[0].style.visibility = 'hidden';
+        begin: ()=>{
+            document.getElementsByClassName('emailPopper')[0].style.visibility = 'visible';
         }
     });
     
@@ -34,7 +34,10 @@ document.getElementsByClassName('svg-wrapper')[0].addEventListener('click',()=>{
 document.getElementById('submit').addEventListener('click', ()=>{
     anime({
         targets: '.emailPopper',
-        top: ['65vh','100vh']
+        top: ['65vh','100vh'],
+        complete: ()=>{
+            document.getElementsByClassName('emailPopper')[0].style.visibility = 'hidden';
+        }
     });
 document.getElementById('text').innerText = "NOTIFIED";
 });
