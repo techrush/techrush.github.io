@@ -178,6 +178,18 @@ header{
     stroke-width: 12px;
     stroke: #F7153D;
   } 
+  .text {
+    color: #fff;
+    font-family: 'Roboto Condensed';
+    font-size: 22px;
+    letter-spacing: 8px;
+    line-height: 32px;
+    position: relative;
+    width: 300px;
+    top: -80px;
+    padding-left: 110px;
+    text-align: left;
+  }
   #text {
     color: #fff;
     font-family: 'Roboto Condensed';
@@ -198,10 +210,10 @@ header{
     -webkit-animation: 0.5s draw linear forwards;
     animation: 0.5s draw linear forwards;
   }
-  .svg-rect-wrapper #text {
+  .svg-rect-wrapper .text {
     transition: all 1s;
   }
-  .svg-rect-wrapper:hover #text {
+  .svg-rect-wrapper:hover .text {
     color: #F7153D;
     font-weight: bolder;
     /* font-size: 22px; */
@@ -409,21 +421,7 @@ header{
         padding-left: 10px; 
         text-align: center;
     }
-      @keyframes drawS {
-        0% {
-          stroke-dasharray: 140 540;
-          stroke-dashoffset: -474;
-          stroke-width: 6px;
-          fill:transparent;
-        }
-        100% {
-          stroke-dasharray: 760;
-          stroke-dashoffset: 0;
-          stroke-width: 3px;
-          fill:white;
-          color: #F7153D;
-        }
-      }
+     
       .getnotified {
         padding-top: 40px;
         padding-left: 0px;
@@ -462,15 +460,111 @@ header{
             color: #fff;
             font-weight: 300;
         }
-        100%{
+        99%{
             color: #F7153D;
-            
+            font-weight: 400;
+        }
+        100%{
+            color: #fff;
             font-weight: 400;
         }
     }
+    @keyframes drawS {
+        0% {
+          stroke-dasharray: 140 540;
+          stroke-dashoffset: -474;
+          stroke-width: 6px;
+          fill:transparent;
+        }
+        99% {
+            stroke-dasharray: 760;
+            stroke-dashoffset: 0;
+            stroke-width: 3px;
+            fill:white;
+            color: #F7153D;
+          }
+        100% {
+          stroke-dasharray: 760;
+          stroke-dashoffset: 0;
+          stroke-width: 3px;
+          fill:transparent;
+          color: #fff;
+        }
+      }
     .animationClass{
         animation:  0.5s animaT linear forwards;
     }
+    .animationClassDraw{
+        animation:  0.5s drawS linear forwards;
+    }
+    .emailPopper{
+        position: absolute;
+        top: 100vh;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        height: 30vh;
+    }
+    .emailPopperHeader{
+        height: 10vh;
+        width:100%;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-align: center;
+        margin-top: 3vh;
+        /* padding-left: 10%; */
+    }
+    .emailPopperSpan{
+        padding: 0 10%;
+        /* margin-top: 3vh; */
+        /* width: 100vw; */
+        text-align: center;
+        padding-top: 1.6vh;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #F7153D;
+    }
+   .emailInput{
+        margin-top: 1vh;
+        height: 12vh;
+        width: 100vw;
+        /* background-color: #F7153D; */
+   }
+.inputEmail{
+    width: 60vw;
+    margin: 0 20vw;
+    padding: 0 0;
+}
+input{
+    border: none;
+    font-size: 18px;
+    border-bottom: 1px solid red;
+}
+input:focus{
+    outline: none;
+    background: #fff;
+}
+input::placeholder {
+    color: #707070;
+    font-size: 15px;
+  }
+#submit{
+    width: 24vw;
+    height: 40px;
+    margin-left: 42vw;
+    margin-top: 3vh;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: black;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+}  
+#submit:active{
+    color: #F7153D;
+    transform: scale(1.1); 
+}
 }
 @media (max-width: 360px) {
   .title-container{
