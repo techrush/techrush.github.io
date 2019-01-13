@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -17,8 +18,8 @@
     </div>
  <div class="background">
     <header>
-        <div class="days-rem">
-            12
+        <div class="days-rem" id="days">
+            
         </div>
         <hr class="header-line">
         <div class="header-info">
@@ -26,7 +27,7 @@
                     Days to go
                 </div>
         <div class="header-info header-animation">
-                We'll not  start without you |
+              <span class="demoTyper"></span>  
         </div>
     </div>
         
@@ -43,26 +44,26 @@
     <div class="countdownContainer">
         <div class="countdownContainerAllign">
 
-    <div class="circle" id='days'>
-       <div class="circleText">
+    <div class="circle" >
+       <div class="circleText" id='days'>
            10
        </div>
         DAYS
     </div>
-    <div class="circle" id='hours'>
-            <div class="circleText">
+    <div class="circle">
+            <div class="circleText"  id='hours'>
                     10
                 </div>
                  HOURS
     </div>
-    <div class="circle" id='min'>
-            <div class="circleText">
+    <div class="circle" >
+            <div id='min' class="circleText">
                     10
                 </div>
                 MIN
     </div>
-    <div class="circle" id='secs'>
-            <div class="circleText">
+    <div class="circle" >
+            <div class="circleText" id='secs'>
                     10
                 </div>
                  SECS
@@ -86,11 +87,11 @@
                      <div class="text">GET NOTIFIED</div>
                   </div>
                   
-                  <div class="svg-wrapper">
+                  <div class="svg-wrapper" onclick="ani()">
                         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                           <rect class="shape" height="60" width="320" />
                         </svg>
-                         <div class="text">GET NOTIFIED</div>
+                         <div class="text" id='text'>GET NOTIFIED</div>
                       </div>
     </div>
     <div class="social-media-container">
