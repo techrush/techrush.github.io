@@ -282,7 +282,7 @@ header{
   @media (max-width: 600px) {
     
     *{
-        overflow: scroll;
+        /* overflow: scroll; */
     }
     
     .cross-text,.side-line{
@@ -298,8 +298,8 @@ header{
     .header-info{
         margin-left: 1rem;
         font-size: 0.9rem;
-        
-        font-weight: 400;
+        font-weight: 300;
+        letter-spacing: 2px;
     }
     .days-rem-message{
         top: 40px;
@@ -462,7 +462,5 @@ header{
       .social-media-logo {
         height: 20px;
         padding-right: 15px;
-    }
-    .header-animation{
     }
 }
