@@ -3,6 +3,19 @@ const menuCloser = document.getElementsByClassName('menu-closer')[0];
 const shape = document.getElementsByClassName('rect-shape')[0];
 const menu = document.getElementsByClassName('menu-container')[0];
 
+
+//firebase
+var database = firebase.database();
+
+// writeUserData('techcrunch@gmail.com');
+function writeUserData(email) {
+    var postsRef = database.ref().child("emailIDs");
+    var newPostRef = postsRef.push();
+    newPostRef.set({
+      
+      email: email,
+    });
+  }
 svgRect.addEventListener("click",()=>{
     // menu.classList.remove('menu-closed');
    
@@ -39,15 +52,60 @@ document.getElementsByClassName('svg-wrapper')[0].addEventListener('click',()=>{
     });
     
 });
-document.getElementById('submit').addEventListener('click', ()=>{
-    anime({
-        targets: '.emailPopper',
-        top: ['65vh','100vh']
-       
-    });
-document.getElementById('text').innerText = "NOTIFIED";
+
+
+document.getElementById('submit-L').addEventListener('click', ()=>{
+    const emailID = document.getElementById('value-L').value;
+    // alert(document.getElementById('value-L').value);
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if (emailID == "") {
+        alert("EMAIL must be filled out");
+        }
+        else if(reg.test(emailID) == false){
+            {
+                alert('Invalid Email Address');
+                
+            }
+     }
+    else{
+    
+        writeUserData(emailID);
+        anime({
+            targets: '.menu-container',
+            height: ['60vh','0vh']
+        });
+    }
 });
-  var countDownDate = new Date("Feb 5, 2019 10:30:00").getTime();
+document.getElementById('submit').addEventListener('click', ()=>{
+    // alert(document.getElementById('value-L').value);
+   
+
+    const emailID = document.getElementById('value').value;
+  
+    if (emailID == "") {
+        alert("EMAIL must be filled out");
+        }
+        else if(reg.test(emailID) == false){
+            {
+                alert('Invalid Email Address');
+                
+            }
+    
+        }
+    else{
+        writeUserData(emailID);
+        anime({
+            targets: '.emailPopper',
+            top: ['65vh','100vh']
+           
+        });
+    document.getElementById('text').innerText = "NOTIFIED";
+    }
+});
+
+
+
+var countDownDate = new Date("Feb 5, 2019 10:30:00").getTime();
 
 
 var x = setInterval(function() {
