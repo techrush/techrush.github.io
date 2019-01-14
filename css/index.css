@@ -50,12 +50,41 @@ font-weight: 600;
     font-weight: 300;
     font-size: 2rem;
 }
-.circle-L{
-    height: 60px;
-    width: 60px;
+.menu-title-countdown-L{
+    font-weight: 600;
+    font-size: 3.5rem;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.countdown-L-span{
+    /* background-color: #F7153D; */
     display: inline-block;
-    border-radius: 10px;
-    margin-right: 2vw;
+    margin-top: 7%;
+    margin-left: 10.3vw;
+}
+.time-L{
+    height: 50%;
+    width: 100%;
+    padding-top: 10%;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    color: #F7153D;
+    margin-bottom: 5%;
+}
+.circleText-L{
+    font-size: 1.4rem;
+    width: 100%;
+    color: #F7153D;
+    text-align: center;
+}
+.circle-L{
+    height: 6vw;
+    width: 6vw;
+    display: inline-block;
+    border-radius: 20px;
+    margin-right: 1vw;
     border: 2px solid #707070;
     margin-bottom: 10px;
     text-align: center;
@@ -477,9 +506,11 @@ input::placeholder {
     .countdownContainerAllign{
         margin: 0 21vw;
         display: inline-block;
+        overflow: hidden;
     }
     .countdownContainer{
         width: 100%;
+        overflow: hidden;
         height: 60vw;
         margin-top: 4vh;
     }
@@ -704,3 +735,8 @@ input::placeholder {
       font-size: 12px;
   }
 }
+/* @media ( max-height : 600px) {
+    .background{
+        height: 1000px; 
+    }
+} */
