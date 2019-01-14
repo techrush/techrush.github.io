@@ -69,6 +69,7 @@ font-weight: 600;
 .time-L{
     height: 50%;
     width: 100%;
+    overflow: hidden;
     padding-top: 10%;
     font-weight: 700;
     font-size: 3rem;
