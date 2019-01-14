@@ -11,6 +11,9 @@
     letter-spacing: 3px;
     padding-left: 4rem;
 }
+#value-L{
+    font-size: 1.5rem;
+}
 .emailInput-L{
     width: 100%;
     margin-top: 7vh;
@@ -439,7 +442,11 @@ input::placeholder {
   /* @media (max-width:  ) */
  
   @media (max-width: 600px) {
-    
+    *{
+        
+            overflow-y:hidden;
+        
+    }
     
     .cross-text,.side-line{
         visibility: hidden;
@@ -735,8 +742,11 @@ input::placeholder {
       font-size: 12px;
   }
 }
-/* @media ( max-height : 600px) {
+@media ( max-height : 600px) {
     .background{
         height: 1000px; 
     }
-} */
+    *{
+        overflow-y: scroll;
+    }
+}
