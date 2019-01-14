@@ -82,6 +82,7 @@ document.getElementById('submit').addEventListener('click', ()=>{
 
     const emailID = document.getElementById('value').value;
   
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (emailID == "") {
         alert("EMAIL must be filled out");
         }
