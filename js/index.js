@@ -69,6 +69,25 @@ var x = setInterval(function() {
 
     
   }, 1000);
+  var x = setInterval(function() {
+
+
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    document.getElementById("days1").innerHTML = days;
+    document.getElementById("days-L").innerHTML = days;
+    document.getElementById("hours-L").innerHTML = hours;
+    document.getElementById("min-L").innerHTML = minutes;
+    document.getElementById("sec-L").innerHTML = seconds;
+
+    
+  }, 1000);
   var typed = new Typed('.demoTyper', {
     strings: ["We will not start without you.. ", "It is going to be lit!"],
     typeSpeed: 120,
