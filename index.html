@@ -9,6 +9,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCTgOUkjxk6HRAr8bkwNwdkwAR6I4EXVyY",
+    authDomain: "coderush-be624.firebaseapp.com",
+    databaseURL: "https://coderush-be624.firebaseio.com",
+    projectId: "coderush-be624",
+    storageBucket: "",
+    messagingSenderId: "44873038842"
+  };
+  firebase.initializeApp(config);
+  var database = firebase.database();
+</script>
     <title>CodeRush</title>
 </head>
 <body>
@@ -63,7 +78,7 @@
         </div>
 
         <div class="emailInput-L">
-            <input type="text" name="email" class="inputEmail-L" placeholder="email">
+            <input type="email" name="email" id="value-L" class="inputEmail-L" placeholder="email">
             <input type="submit" name="submit" id="submit-L" value="GET IN">
         </div>
         </div>
@@ -160,9 +175,10 @@
     </div>
     
     <div class="emailInput">
-        <input type="text" name="email" value="" class="inputEmail" placeholder="email">
+        <input type="email" name="email" value="" id="value" class="inputEmail" placeholder="email">
         <input type="submit" name="submit" id="submit" value="GET IN">
     </div>  </div>
+    
     <script src="js/index.js"></script>
 </body>
 </html>
