@@ -100,3 +100,29 @@ p{
    ::-webkit-scrollbar-thumb:hover {
     background: rgb(218, 145, 145);
   }
+
+  @media only screen and (max-width: 600px) {
+  .header-content{
+      display: none;
+  }
+  .title-header{
+      font-size: 1.6rem;
+      padding-left: 0;
+      margin-left: 10%;
+  }
+header{
+    width: 100vw;
+}
+.body-title{
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 20px;
+}
+.body-content{
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+.body-container{
+    grid-template-columns: 10% 80% 10%;
+}
+}
